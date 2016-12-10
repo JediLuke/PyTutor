@@ -38,10 +38,10 @@
 # Some very smart people were playing around with transistors one day, and
 # they build a circuit that, from the outside, looks something like this:
 
-#				 _______
-#		--------|		|
-#				|  AND	|--------
-#		--------|_______|
+#                _______
+#       --------|       |
+#               |  AND  |--------
+#       --------|_______|
 #
 
 # This circuit is called an 'AND gate'. It has two wires going into it, and
@@ -52,52 +52,52 @@
 
 # Here is the first example:
 
-#				 _______
-#		-- 1 ---|		|				## First wire is a 1, AND,
-#				|  AND	|--- 1 --		## Second wire is also a 1
-#		-- 1 ---|_______|				## Therefore output = 1
+#                _______
+#       -- 1 ---|       |               ## First wire is a 1, AND,
+#               |  AND  |--- 1 --       ## Second wire is also a 1
+#       -- 1 ---|_______|               ## Therefore output = 1
 #
 
 
 # We could replace the diagram above with this writing if we wanted.
 #
-# 		(1 AND 1) -> 1
+#       (1 AND 1) -> 1
 #
 
 # More examples:
 
-#				 _______
-#		-- 1 ---|		|				## Only one wire equals 1
-#				|  AND	|--- 0 --		## So no output signal
-#		-- 0 ---|_______|				## (1 AND 0) -> 0
+#                _______
+#       -- 1 ---|       |               ## Only one wire equals 1
+#               |  AND  |--- 0 --       ## So no output signal
+#       -- 0 ---|_______|               ## (1 AND 0) -> 0
 #
 
 
-#				 _______
-#		-- 0 ---|		|				## Only one wire equals 1
-#				|  AND	|--- 0 --		## So output = 0
-#		-- 0 ---|_______|				## (0 AND 0) -> 0
+#                _______
+#       -- 0 ---|       |               ## Only one wire equals 1
+#               |  AND  |--- 0 --       ## So output = 0
+#       -- 0 ---|_______|               ## (0 AND 0) -> 0
 #
 
 # This is how the AND gate works, there are a few different types (XOR
 # is used below), and we can chain them together to do complicated stuff.
 
-#				 _______
-#		-- 0 ---|		|				
-#				|  XOR	|--- 1 --	 _______
-#		-- 1 ---|_______|		 |__|		|
-#								  	|  AND	|--- 1 --
-#				 _______		  __|		|
-#		-- 1 ---|		|		 |	|_______|
-#				|  AND	|--- 1 --		
-#		-- 1 ---|_______|
+#                _______
+#       -- 0 ---|       |               
+#               |  XOR  |--- 1 --    _______
+#       -- 1 ---|_______|        |__|       |
+#                                   |  AND  |--- 1 --
+#                _______          __|       |
+#       -- 1 ---|       |        |  |_______|
+#               |  AND  |--- 1 --       
+#       -- 1 ---|_______|
 #
 
 # The code to represent this circuit looks like
 #
-#		((0 XOR 1)
-#			AND
-#		 (1 AND 1)) -> 1
+#       ((0 XOR 1)
+#           AND
+#        (1 AND 1)) -> 1
 
 # We can see that by having different inputs, we can get different output. This
 # is what writing computer code is!! By picking the right gates, combining them
@@ -144,6 +144,13 @@ print ("of this file. Only run the file after reading the code.")
 # brackets soon, but for now, just put them in.
 print ("Can you please enter your name?")
 x = raw_input()
+
+
+# The next thing we shall do is to answer the user. We shall print the name
+# back out in a nice greetings.
+greeting = "Nice to meet you, " + x
+print (greeting)
+
 
 
 # Put your version of the code under here
